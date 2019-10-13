@@ -1,0 +1,19 @@
+{
+  "name": "restaurant-finder",
+  "version": "1.0.0",
+  "description": "This is for universal web app restaurant",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NickUseGitHub/restaurant-finder.git"
+  },
+  "author": "Chaiwat Tungtongsoontorn <nickt.tnick@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NickUseGitHub/restaurant-finder/issues"
+  },
+  "homepage": "https://github.com/NickUseGitHub/restaurant-finder#readme"
+}
