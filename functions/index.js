@@ -9,10 +9,6 @@ const LINE_HEADER = {
 };
 const GOOGLE_MAP_API = 'https://maps.googleapis.com/maps/api/place/nearbysearch';
 
-exports.helloWorld = functions.region('asia-east2').https.onRequest((request, response) => {
-  response.send("Hello from Firebase!");
-});
-
 exports.getRestaurants = functions.region('asia-east2').https.onRequest(async (request, response) => {
   const restaurants = await findRestaurants();
   response.json(restaurants);
