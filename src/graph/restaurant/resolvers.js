@@ -1,20 +1,14 @@
+const axios = require('axios');
+
 module.exports = {
   Query: {
-    restaurants() {
-      return [
-        {
-          name: 'Res1',
-        },
-        {
-          name: 'Res2',
-        },
-        {
-          name: 'Res3',
-        },
-        {
-          name: 'Res4',
-        },
-      ];
+    async restaurants() {
+      return axios({
+        method: 'get',
+        url: `${process.env.API_URL}/getRestaurants`,
+      }).then(response => {
+        return response.data;
+      });
     },
   },
 };
