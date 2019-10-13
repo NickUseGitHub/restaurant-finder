@@ -7,9 +7,11 @@ const LINE_HEADER = {
   'Content-Type': 'application/json',
   'Authorization': `Bearer ${configs.channelAccessToken}`
 };
+const GOOGLE_MAP_API = 'https://maps.googleapis.com/maps/api/place/nearbysearch';
 
-exports.helloWorld = functions.region('asia-east2').https.onRequest((request, response) => {
-  response.send("Hello from Firebase!");
+exports.getRestaurants = functions.region('asia-east2').https.onRequest(async (request, response) => {
+  const restaurants = await findRestaurants();
+  response.json(restaurants);
 });
 
 exports.webhook = functions.region('asia-east2').https.onRequest((request, response) => {
@@ -33,5 +35,20 @@ function replyMessage(req) {
         }
       ]
     }
+  });
+}
+
+function findRestaurants() {
+  return axios({
+    method: 'get',
+    url: `${GOOGLE_MAP_API}/json`,
+    params: {
+      key: configs.googleApiKey,
+      radius: 2000,
+      location: '-33.8670522,151.1957362',
+      type: 'restaurant'
+    }
+  }).then(response => {
+    return response.data.results;
   });
 }
