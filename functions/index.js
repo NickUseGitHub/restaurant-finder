@@ -50,7 +50,7 @@ function findRestaurants() {
     params: {
       key: configs.googleApiKey,
       radius: 2000,
-      location: '-33.8670522,151.1957362',
+      location: '13.8028689,100.5348654',
       type: 'restaurant',
     },
   }).then(response => {
