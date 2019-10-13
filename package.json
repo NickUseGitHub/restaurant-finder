@@ -4,7 +4,7 @@
   "description": "This is for universal web app restaurant",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "node ./src/server.js",
     "build": "next build",
     "start": "next start"
   },
@@ -19,7 +19,9 @@
   },
   "homepage": "https://github.com/NickUseGitHub/restaurant-finder#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "next": "^9.1.1",
+    "next-routes": "^1.4.2",
     "react": "^16.10.2",
     "react-dom": "^16.10.2"
   }
