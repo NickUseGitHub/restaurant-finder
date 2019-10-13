@@ -66,3 +66,6 @@ node_modules/
 
 # exclude firebase cloud function config
 functions/configs.js
+
+# nextJS
+.next
