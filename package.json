@@ -4,7 +4,9 @@
   "description": "This is for universal web app restaurant",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "node ./src/server.js",
+    "build": "next build",
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,13 @@
   "bugs": {
     "url": "https://github.com/NickUseGitHub/restaurant-finder/issues"
   },
-  "homepage": "https://github.com/NickUseGitHub/restaurant-finder#readme"
+  "homepage": "https://github.com/NickUseGitHub/restaurant-finder#readme",
+  "dependencies": {
+    "apollo-server-express": "^2.9.6",
+    "express": "^4.17.1",
+    "next": "^9.1.1",
+    "next-routes": "^1.4.2",
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  }
 }
