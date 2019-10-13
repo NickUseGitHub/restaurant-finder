@@ -1,21 +1,30 @@
-const { ApolloServer, gql } = require('apollo-server-express')
+const { ApolloServer, makeExecutableSchema } = require('apollo-server-express');
+const restaurants = require('./restaurant');
+
+const typeModuleDefs = [restaurants.schema];
+const moduleResolvers = [restaurants.resolvers];
 
 // Construct a schema, using GraphQL schema language
-const typeDefs = gql`
+const RootSchema = `
   type Query {
     hello: String
   }
 `;
 
 // Provide resolver functions for your schema fields
-const resolvers = {
+const RootResolvers = {
   Query: {
     hello: () => 'Hello world!',
   },
 };
 
+const schema = makeExecutableSchema({
+  typeDefs: [RootSchema, ...typeModuleDefs],
+  resolvers: [RootResolvers, ...moduleResolvers],
+});
+
 module.exports = function applyGraphQLmiddleware({ app }) {
-  const graphServer = new ApolloServer({ typeDefs, resolvers });
+  const graphServer = new ApolloServer({ schema });
 
   graphServer.applyMiddleware({ app, path: '/api' });
-}
+};
