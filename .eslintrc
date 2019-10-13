@@ -5,6 +5,7 @@
   "extends": ["eslint:recommended", "prettier"],
   "globals": {
     "console": "readonly",
+    "module": "readonly",
     "process": "readonly",
     "require": "readonly"
   },
