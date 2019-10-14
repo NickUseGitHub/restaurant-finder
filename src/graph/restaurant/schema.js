@@ -5,5 +5,8 @@ module.exports = `
 
   type Restaurant {
     name: String
+    isOpenNow: Boolean
+    address: String
+    rating: String
   }
 `;
