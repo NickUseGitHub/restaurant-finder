@@ -69,3 +69,5 @@ functions/configs.js
 
 # nextJS
 .next
+
+nginxVolumn

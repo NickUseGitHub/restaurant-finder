@@ -4,6 +4,7 @@ services:
     image: nginx:1.17.2-alpine
     volumes:
       - ./.conf:/etc/nginx
+      - ./nginxVolumn:/var/cache/nginx
     links:
       - app
     ports:
