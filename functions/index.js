@@ -27,7 +27,7 @@ exports.webhook = functions
 
 function transformRestaurantIntoCarousel(restaurant) {
   return {
-    thumbnailImageUrl: 'https://example.com/bot/images/item1.jpg',
+    thumbnailImageUrl: 'https://picsum.photos/200/150?random=1',
     imageBackgroundColor: '#FFFFFF',
     title: restaurant.name,
     text: restaurant.name,
