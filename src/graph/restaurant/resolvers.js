@@ -17,7 +17,7 @@ module.exports = {
               name: get(restaurant, 'name'),
               isOpenNow: get(restaurant, 'opening_hours.open_now') || false,
               address: get(restaurant, 'vicinity'),
-              rating: get(restaurant, 'rating'),
+              rating: Math.floor(get(restaurant, 'rating') || 0),
             };
           });
         });

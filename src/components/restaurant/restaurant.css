@@ -1,5 +1,17 @@
 .restaurant {
   border: 1px solid black;
-  margin: 5px 0px;
+  border-radius: 5px;
+  margin: 10px 0px;
   padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.restaurant.not-open span.title {
+  text-decoration: line-through;
+}
+
+.restaurant .rating {
+  color: #dcdc30;
 }
