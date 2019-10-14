@@ -16,7 +16,6 @@ class MyApp extends App {
     const { Component, pageProps } = this.props;
     return (
       <MainLayout>
-        <div>Header</div>
         <Component {...pageProps} />
       </MainLayout>
     );
