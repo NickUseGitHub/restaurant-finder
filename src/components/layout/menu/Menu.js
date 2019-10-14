@@ -1,9 +1,10 @@
 import { Link } from '../../../routes';
+import './menu.css';
 
 export default function Menu(props) {
   return (
     <Link {...props}>
-      <a>{props.title}</a>
+      <a className="menu">{props.title}</a>
     </Link>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import './menus.css';
 import Menu from './Menu';
 
 export default function Menus() {

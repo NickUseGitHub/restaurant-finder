@@ -1,6 +1,7 @@
 .navbar {
   background-color: #ec1c25;
   display: flex;
+  align-items: center;
 }
 
 .navbar h1 {
