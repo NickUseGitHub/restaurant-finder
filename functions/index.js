@@ -19,14 +19,52 @@ exports.getRestaurants = functions
 
 exports.webhook = functions
   .region('asia-east2')
-  .https.onRequest((request, response) => {
-    replyMessage(request);
+  .https.onRequest(async (request, response) => {
+    const restaurants = await findRestaurants();
+    replyMessage(request, restaurants);
     response.send('This is webhook!');
   });
 
-function replyMessage(req) {
-  console.log('hook replyMessage');
+function transformRestaurantIntoCarousel(restaurant) {
+  return {
+    thumbnailImageUrl: 'https://picsum.photos/200/150?random=1',
+    imageBackgroundColor: '#FFFFFF',
+    title: restaurant.name,
+    text: restaurant.name,
+    defaultAction: {
+      type: 'uri',
+      label: 'View detail',
+      uri: 'http://example.com/page/123',
+    },
+    actions: [
+      {
+        type: 'postback',
+        label: 'Buy',
+        data: 'action=buy&itemid=111',
+      },
+      {
+        type: 'postback',
+        label: 'Add to cart',
+        data: 'action=add&itemid=111',
+      },
+      {
+        type: 'uri',
+        label: 'View detail',
+        uri: 'http://example.com/page/111',
+      },
+    ],
+  };
+}
 
+function filterCloseRestaurant(restaurant) {
+  return (
+    restaurant &&
+    restaurant.opening_hours &&
+    restaurant.opening_hours.open_now === true
+  );
+}
+
+function replyMessage(req, restaurants) {
   return axios({
     method: 'post',
     url: `${LINE_MESSAGING_API}/reply`,
@@ -35,8 +73,17 @@ function replyMessage(req) {
       replyToken: req.body.events[0].replyToken,
       messages: [
         {
-          type: `text`,
-          text: req.body.events[0].message.text,
+          type: 'template',
+          altText: 'ร้านอาหารใกล้เคียงบางซื่อจ้า',
+          template: {
+            type: 'carousel',
+            columns: restaurants
+              .filter(filterCloseRestaurant)
+              .slice(0, 4)
+              .map(transformRestaurantIntoCarousel),
+            imageAspectRatio: 'rectangle',
+            imageSize: 'cover',
+          },
         },
       ],
     },
