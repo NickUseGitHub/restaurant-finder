@@ -1,0 +1,9 @@
+.navbar {
+  background-color: #ec1c25;
+  display: flex;
+}
+
+.navbar h1 {
+  color: white;
+  font-size: 21pt;
+}
