@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/NickUseGitHub/restaurant-finder#readme",
   "dependencies": {
+    "@zeit/next-css": "^1.0.1",
     "apollo-server-express": "^2.9.6",
     "axios": "^0.19.0",
     "dotenv": "^8.1.0",
