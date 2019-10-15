@@ -2,6 +2,7 @@ import React from 'react';
 import App from 'next/app';
 
 import '../css/bootstrap.min.css';
+import '../css/bootstrap-grid.min.css';
 import MainLayout from '../components/layout/MainLayout';
 
 class MyApp extends App {
