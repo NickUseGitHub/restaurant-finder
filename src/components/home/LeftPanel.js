@@ -35,6 +35,15 @@ export default function LeftPanel() {
           <li>👉 Good command in english</li>
         </ul>
       </div>
+
+      <div className="contact">
+        <h2>Contact</h2>
+        <ul>
+          <li>☎ +66851362253</li>
+          <li>📧 nickt.tnick@gmail.com</li>
+          <li>👉 www.facebook.com/NickJyButt</li>
+        </ul>
+      </div>
     </div>
   );
 }
