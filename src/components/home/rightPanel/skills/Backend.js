@@ -3,11 +3,11 @@ import PercentageSkill from './PercentageSkill';
 import SkillListWrapper from './SkillListWrapper';
 import SkillList from './SkillList';
 
-export default function Skills() {
+export default function Backend() {
   return (
     <div className="row">
       <div className="col-lg-12">
-        <h3>Skills</h3>
+        <h3>Backend</h3>
       </div>
       <div className="col-lg-12 item-lists">
         <div className="row">

@@ -4,7 +4,7 @@ export default function PercentageSkill({ percentage }) {
   return (
     <div className="percentage-skill">
       <div className="filled-percentage"></div>
-      <div className="title">70%</div>
+      <div className="title">{percentage}%</div>
       <style jsx>{`
         .percentage-skill {
           width: 100px;
