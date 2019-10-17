@@ -16,6 +16,16 @@ export default function SkillList({ title, skills }) {
         .skill-list {
           padding: 10px;
           margin: 0;
+          list-style-type: none;
+        }
+
+        .skill-list li.title {
+          font-size: 15pt;
+          color: red;
+        }
+
+        .skill-list li.strong {
+          font-weight: bold;
         }
       `}</style>
     </ul>
