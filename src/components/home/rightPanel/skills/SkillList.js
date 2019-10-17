@@ -1,5 +1,5 @@
 import React from 'react';
-import configCss from '../../../css/configs';
+import configCss from '../../../../css/configs';
 
 export default function SkillList({ title, skills }) {
   return (
