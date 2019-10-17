@@ -1,4 +1,5 @@
 import React from 'react';
+import configCss from '../../../css/configs';
 
 export default function SkillList({ title, skills }) {
   return (
@@ -21,7 +22,7 @@ export default function SkillList({ title, skills }) {
 
         .skill-list li.title {
           font-size: 15pt;
-          color: red;
+          color: ${configCss.mainAppColor};
         }
 
         .skill-list li.strong {
