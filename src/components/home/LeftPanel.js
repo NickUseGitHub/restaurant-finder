@@ -39,7 +39,7 @@ export default function LeftPanel() {
       <div className="contact">
         <h2>Contact</h2>
         <ul>
-          <li>☎ +66851362253</li>
+          <li>☎ +6685-136-2253</li>
           <li>📧 nickt.tnick@gmail.com</li>
           <li>👉 www.facebook.com/NickJyButt</li>
         </ul>
