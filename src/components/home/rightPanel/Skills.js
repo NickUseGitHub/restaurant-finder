@@ -1,4 +1,5 @@
 import React from 'react';
+import PercentageSkill from './PercentageSkill';
 
 export default function Skills() {
   return (
@@ -9,10 +10,7 @@ export default function Skills() {
       <div className="col-lg-12 item-lists">
         <div className="row">
           <div className="col-lg-2">
-            <div className="percentage-skill">
-              <div className="filled-percentage"></div>
-              <div className="title">70%</div>
-            </div>
+            <PercentageSkill percentage={70} />
           </div>
           <div className="col-lg-5">
             <ul>
