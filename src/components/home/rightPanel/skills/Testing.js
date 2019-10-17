@@ -4,26 +4,28 @@ import SkillListWrapper from './SkillListWrapper';
 import SkillList from './SkillList';
 import Panel from './Panel';
 
-export default function Backend() {
+export default function Testing() {
   return (
     <Panel>
       <div className="col-lg-12">
-        <h3>DevOps</h3>
+        <h3>Testing</h3>
       </div>
       <div className="col-lg-12 item-lists">
         <div className="row">
           <div className="col-lg-2">
-            <PercentageSkill percentage={55} />
+            <PercentageSkill percentage={60} />
           </div>
           <SkillListWrapper lgGlid="5">
             <SkillList
-              title="Tools"
               skills={[
                 {
-                  skillTitle: 'Gitlab CI/CD',
+                  skillTitle: 'End to End testing with Puppeteer',
                 },
                 {
-                  skillTitle: 'Jenkins',
+                  skillTitle: 'Unit test with Jest',
+                },
+                {
+                  skillTitle: 'Integration test with Jest',
                 },
               ]}
             />

@@ -4,7 +4,7 @@ import configCss from '../../../../css/configs';
 export default function SkillList({ title, skills }) {
   return (
     <ul className="skill-list">
-      <li className="title">{title}</li>
+      {title && <li className="title">{title}</li>}
       {skills &&
         skills.map(function({ skillTitle, isStrongSkill }) {
           return (

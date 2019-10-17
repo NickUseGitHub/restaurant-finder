@@ -2,6 +2,7 @@ import React from 'react';
 import Backend from './skills/Backend';
 import FrontEnd from './skills/FrontEnd';
 import DevOps from './skills/DevOps';
+import Testing from './skills/Testing';
 
 export default function RightPanel() {
   return (
@@ -9,6 +10,7 @@ export default function RightPanel() {
       <Backend />
       <FrontEnd />
       <DevOps />
+      <Testing />
     </div>
   );
 }

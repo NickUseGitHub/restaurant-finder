@@ -2,10 +2,11 @@ import React from 'react';
 import PercentageSkill from './PercentageSkill';
 import SkillListWrapper from './SkillListWrapper';
 import SkillList from './SkillList';
+import Panel from './Panel';
 
 export default function Backend() {
   return (
-    <div className="row">
+    <Panel>
       <div className="col-lg-12">
         <h3>Backend</h3>
       </div>
@@ -78,6 +79,6 @@ export default function Backend() {
           </SkillListWrapper>
         </div>
       </div>
-    </div>
+    </Panel>
   );
 }
