@@ -1,5 +1,6 @@
 import React from 'react';
 import PercentageSkill from './PercentageSkill';
+import SkillList from './SkillList';
 
 export default function Skills() {
   return (
@@ -13,31 +14,66 @@ export default function Skills() {
             <PercentageSkill percentage={70} />
           </div>
           <div className="col-lg-5">
-            <ul>
-              <li className="title">Programming-languages</li>
-              <li className="strong">NodeJS</li>
-              <li>Shell Script</li>
-            </ul>
-            <ul>
-              <li className="title">Framework</li>
-              <li className="strong">GraphQL</li>
-              <li className="strong">GraphQL-Yoga</li>
-              <li className="strong">Express</li>
-              <li className="strong">Nginx</li>
-            </ul>
+            <SkillList
+              title="Programming-languages"
+              skills={[
+                {
+                  skillTitle: 'NodeJS',
+                  isStrongSkill: true,
+                },
+                {
+                  skillTitle: 'Shell Script',
+                  isStrongSkill: false,
+                },
+              ]}
+            />
+            <SkillList
+              title="Framework"
+              skills={[
+                {
+                  skillTitle: 'GraphQL',
+                  isStrongSkill: true,
+                },
+                {
+                  skillTitle: 'GraphQL-Yoga',
+                },
+                {
+                  skillTitle: 'Express',
+                  isStrongSkill: true,
+                },
+                {
+                  skillTitle: 'Nginx',
+                },
+              ]}
+            />
           </div>
           <div className="col-lg-5">
-            <ul>
-              <li className="title">Database</li>
-              <li>MongoDB</li>
-              <li>MySQL</li>
-              <li>Redis</li>
-            </ul>
-            <ul>
-              <li className="title">Container Tech</li>
-              <li className="strong">Kubernetes</li>
-              <li className="strong">Docker</li>
-            </ul>
+            <SkillList
+              title="Database"
+              skills={[
+                {
+                  skillTitle: 'MongoDB',
+                },
+                {
+                  skillTitle: 'MySQL',
+                },
+                {
+                  skillTitle: 'Redis',
+                },
+              ]}
+            />
+            <SkillList
+              title="Container Tech"
+              skills={[
+                {
+                  skillTitle: 'Kubernetes',
+                },
+                {
+                  skillTitle: 'Docker',
+                  isStrongSkill: true,
+                },
+              ]}
+            />
           </div>
         </div>
       </div>
