@@ -1,5 +1,6 @@
 import React from 'react';
 import PercentageSkill from './PercentageSkill';
+import SkillListWrapper from './SkillListWrapper';
 import SkillList from './SkillList';
 
 export default function Skills() {
@@ -13,7 +14,7 @@ export default function Skills() {
           <div className="col-lg-2">
             <PercentageSkill percentage={70} />
           </div>
-          <div className="col-lg-5">
+          <SkillListWrapper lgGlid="5">
             <SkillList
               title="Programming-languages"
               skills={[
@@ -46,8 +47,8 @@ export default function Skills() {
                 },
               ]}
             />
-          </div>
-          <div className="col-lg-5">
+          </SkillListWrapper>
+          <SkillListWrapper lgGlid="5">
             <SkillList
               title="Database"
               skills={[
@@ -74,7 +75,7 @@ export default function Skills() {
                 },
               ]}
             />
-          </div>
+          </SkillListWrapper>
         </div>
       </div>
     </div>
