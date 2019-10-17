@@ -1,7 +1,7 @@
 import React from 'react';
 
 import LeftPanel from './LeftPanel';
-import RightPanel from './RightPanel';
+import RightPanel from './rightPanel/RightPanel';
 
 export default function Home() {
   return (
