@@ -30,7 +30,7 @@ export default function CompanyExp(props) {
           .company-body {
             display: flex;
             flex-direction: row;
-            justify-content: space-between;
+            justify-content: flex-start;
 
             position: relative;
           }

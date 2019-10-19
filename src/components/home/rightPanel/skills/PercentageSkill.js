@@ -33,6 +33,15 @@ export default function PercentageSkill({ percentage }) {
           font-size: 22pt;
           z-index: 1;
         }
+
+        @media screen and (max-width: 991px) {
+          .percentage-skill {
+            width: 150px;
+            height: 150px;
+
+            margin: 0 auto;
+          }
+        }
       `}</style>
     </div>
   );

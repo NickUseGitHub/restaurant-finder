@@ -25,6 +25,10 @@ export default function ExperienceDetail({ companyDetails }) {
       </ul>
 
       <style jsx>{`
+        .experience-detail {
+          word-break: break-word;
+        }
+
         .experience-detail ul {
           padding: 0;
           margin: 0;

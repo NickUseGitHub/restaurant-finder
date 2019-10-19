@@ -36,6 +36,7 @@ export default function SoftwareDevelopment() {
         .software-development {
           background-color: #d88a8a6b;
           border-radius: 15px;
+          margin-bottom: 15px;
         }
 
         @media screen and (max-width: 767px) {
