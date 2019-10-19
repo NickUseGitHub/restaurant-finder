@@ -19,7 +19,7 @@ export default function CompanyExp(props) {
         {companyLogo && (
           <img className="logo" src={getStaticUrl(companyLogo)} />
         )}
-        <ExperienceDetail companyDetails={companyDetails} />
+        {companyDetails && <ExperienceDetail companyDetails={companyDetails} />}
       </div>
       <style jsx>
         {`

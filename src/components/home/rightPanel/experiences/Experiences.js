@@ -35,6 +35,7 @@ export default function Experiences() {
           },
         ]}
       />
+
       <CompanyExp
         companyTitle="Delight Solution Co., Ltd. (Feb 2014 - Jan 2016)"
         companyTitleColor="#eb028b"
@@ -50,6 +51,11 @@ export default function Experiences() {
             title: 'Create Mind@Work Website',
           },
         ]}
+      />
+
+      <CompanyExp
+        companyTitle="Agere.co.Ltd (Jun 2012 - Sep 2013)"
+        companyTitleColor="#faaf07"
       />
     </Fragment>
   );
