@@ -3,12 +3,13 @@ import PercentageSkill from './PercentageSkill';
 import SkillListWrapper from './SkillListWrapper';
 import SkillList from './SkillList';
 import Panel from './Panel';
+import Title from '../Title';
 
 export default function Frontend() {
   return (
     <Panel>
       <div className="col-lg-12">
-        <h3>Frontend</h3>
+        <Title title="Frontend" fontSize="medium" />
       </div>
       <div className="col-lg-12 item-lists">
         <div className="row">
