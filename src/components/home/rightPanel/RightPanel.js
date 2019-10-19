@@ -6,6 +6,7 @@ import Testing from './skills/Testing';
 import SoftwareDevelopment from './SoftwareDevelopment';
 import Panel from './Panel';
 import Experiences from './experiences/Experiences';
+import Educations from './Educations';
 
 export default function RightPanel() {
   return (
@@ -20,6 +21,10 @@ export default function RightPanel() {
 
       <Panel title="EXPERIENCE">
         <Experiences />
+      </Panel>
+
+      <Panel title="EDUCATION">
+        <Educations />
       </Panel>
 
       <style jsx>{`

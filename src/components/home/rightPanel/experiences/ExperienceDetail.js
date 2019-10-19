@@ -46,7 +46,6 @@ export default function ExperienceDetail({ companyDetails }) {
         }
 
         span.title {
-          color: #3bc34c;
           font-weight: bold;
           font-size: 13pt;
         }

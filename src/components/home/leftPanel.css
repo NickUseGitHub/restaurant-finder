@@ -4,6 +4,9 @@
   align-items: center;
   margin-bottom: 15px;
   height: min-content;
+
+  padding: 15px;
+  background-color: #25252d33;
 }
 
 .left-panel .me-pic {
