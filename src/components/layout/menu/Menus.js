@@ -7,6 +7,7 @@ export default function Menus() {
     <ul className="menu-list">
       <Menu title="Home" route="home" />
       <Menu title="Restaurants" route="restaurants" />
+      <Menu title="StringMatcher" route="stringMatcher" />
     </ul>
   );
 }
