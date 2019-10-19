@@ -5,16 +5,21 @@ import DevOps from './skills/DevOps';
 import Testing from './skills/Testing';
 import SoftwareDevelopment from './SoftwareDevelopment';
 import Panel from './Panel';
+import Experiences from './experiences/Experiences';
 
 export default function RightPanel() {
   return (
     <div className="righ-panel col-lg-8">
-      <Panel title="skills">
+      <Panel title="SKILLS">
         <Backend />
         <FrontEnd />
         <DevOps />
         <Testing />
         <SoftwareDevelopment />
+      </Panel>
+
+      <Panel title="EXPERIENCE">
+        <Experiences />
       </Panel>
 
       <style jsx>{`
