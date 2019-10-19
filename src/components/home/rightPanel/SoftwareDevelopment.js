@@ -1,5 +1,6 @@
 import React from 'react';
 import SkillList from './skills/SkillList';
+import Title from './Title';
 
 export default function SoftwareDevelopment() {
   return (
@@ -12,7 +13,6 @@ export default function SoftwareDevelopment() {
           },
         ]}
       />
-
       <SkillList
         title="IDE"
         skills={[
@@ -21,7 +21,6 @@ export default function SoftwareDevelopment() {
           },
         ]}
       />
-
       <SkillList
         title="Expected Skill"
         skills={[
@@ -33,7 +32,6 @@ export default function SoftwareDevelopment() {
           },
         ]}
       />
-
       <style jsx>{`
         .software-development {
           background-color: #d88a8a6b;
@@ -51,7 +49,7 @@ export default function SoftwareDevelopment() {
         @media screen and (min-width: 1025px) {
           .software-development {
             position: absolute;
-            bottom: 20%;
+            bottom: 5%;
             right: 0;
 
             width: 300px;
