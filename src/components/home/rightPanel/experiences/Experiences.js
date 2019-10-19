@@ -1,47 +1,38 @@
 import React from 'react';
 import Title from './Title';
-import ExperienceDetail from './ExperienceDetail';
-import getStaticUrl from '../../../../utils/getStaticUrl';
+import CompanyExp from './CompanyExp';
 
 export default function Experiences() {
   return (
-    <div className="company">
-      <Title>Tencent (Thailand) Company Limited (Aug 2016 - Now)</Title>
-      <div className="company-body">
-        <img className="logo" src={getStaticUrl('tencentLogo.png')} />
-        <ExperienceDetail />
-      </div>
-      <style jsx>
-        {`
-          .company {
-            margin-top: 15px;
-          }
-
-          .company-body {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-
-            position: relative;
-          }
-
-          .logo {
-            width: 146px;
-            height: 43px;
-          }
-
-          @media screen and (max-width: 1024px) {
-            .logo {
-              width: auto;
-              height: 22px;
-
-              position: -webkit-sticky;
-              position: sticky;
-              top: 20px;
-            }
-          }
-        `}
-      </style>
-    </div>
+    <CompanyExp
+      companyTitle="Tencent (Thailand) Company Limited (Aug 2016 - Now)"
+      companyTitleColor="#552cd3"
+      companyLogo="tencentLogo.png"
+      companyDetails={[
+        {
+          title: 'Sanook Website',
+          details: [
+            'Collaborate with team to create new sanook website with react (Universal Web Application)',
+            'Provide GraphQL to deliver data to frontend',
+          ],
+        },
+        {
+          title: 'Participate Hackathon with Chatbot called Sanook Agent',
+          details: ['start simple app within 2 days'],
+        },
+        {
+          title: 'Joox',
+          details: ['Operate backend to start Joox website'],
+        },
+        {
+          title:
+            'Driven Election Campaign on https://www.sanook.com/news/election',
+          details: [
+            'To support realtime feed on website',
+            'Build website in short time',
+          ],
+        },
+      ]}
+    />
   );
 }

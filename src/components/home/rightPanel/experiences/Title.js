@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Title({ children }) {
+export default function Title({ children, color }) {
   if (!children) return;
 
   return (
@@ -10,7 +10,7 @@ export default function Title({ children }) {
         h3 {
           font-weight: bold;
           font-size: 1.2em;
-          color: #552cd3;
+          color: ${color};
         }
       `}</style>
     </h3>

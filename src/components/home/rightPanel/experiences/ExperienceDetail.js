@@ -1,33 +1,27 @@
 import React from 'react';
 
-export default function ExperienceDetail() {
+export default function ExperienceDetail({ companyDetails }) {
+  if (!companyDetails) return;
+
   return (
     <div className="experience-detail">
       <ul>
-        <li>
-          <span className="title">Sanook Website</span>
-          <ul>
-            <li>
-              Collaborate with team to create new sanook website with react
-              (Universal Web Application)
-            </li>
-            <li>Provide GraphQL to deliver data to frontend</li>
-          </ul>
-        </li>
-        <li>
-          <span className="title">
-            Participate Hackathon with Chatbot called Sanook Agent
-          </span>
-          <ul>
-            <li>start simple app within 2 days</li>
-          </ul>
-        </li>
-        <li>
-          <span className="title">Joox</span>
-        </li>
-        <li>
-          <span className="title">Driven Election Campaign</span>
-        </li>
+        {companyDetails &&
+          companyDetails.map(function(companyDetail) {
+            const { title, details } = companyDetail;
+
+            return (
+              <li>
+                <span className="title">{title}</span>
+                <ul>
+                  {details &&
+                    details.map(function(detail) {
+                      return <li>{detail}</li>;
+                    })}
+                </ul>
+              </li>
+            );
+          })}
       </ul>
 
       <style jsx>{`
