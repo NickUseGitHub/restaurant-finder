@@ -1,3 +1,5 @@
+/* global __dirname */
+const path = require('path');
 const next = require('next');
 const express = require('express');
 const applyGraphQLmiddleware = require('./graph');
@@ -11,6 +13,8 @@ const handler = routes.getRequestHandler(app);
 
 app.prepare().then(() => {
   applyGraphQLmiddleware({ app: expressApp });
+
+  expressApp.use(express.static(path.join(__dirname, 'public')));
 
   expressApp.use(handler).listen(port, function(err) {
     if (err) {

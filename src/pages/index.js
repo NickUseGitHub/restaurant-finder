@@ -1,5 +1,3 @@
-import React from 'react';
+import Home from '../components/home/Home';
 
-export default function Home() {
-  return <div>Welcome to Next.js!</div>
-}
+export default Home;

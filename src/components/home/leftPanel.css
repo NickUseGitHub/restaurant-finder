@@ -1,0 +1,35 @@
+.left-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+  height: min-content;
+
+  padding: 15px;
+  background-color: #25252d33;
+}
+
+.left-panel .me-pic {
+  height: 200px;
+  width: auto;
+  border-radius: 50%;
+}
+
+.left-panel div {
+  width: 100%;
+  margin-top: 15px;
+}
+
+.left-panel ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media screen and (min-width: 1025px) {
+  .left-panel {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+  }
+}
