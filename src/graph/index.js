@@ -1,8 +1,9 @@
 const { ApolloServer, makeExecutableSchema } = require('apollo-server-express');
 const restaurants = require('./restaurant');
+const stringMatcher = require('./stringMatcher');
 
-const typeModuleDefs = [restaurants.schema];
-const moduleResolvers = [restaurants.resolvers];
+const typeModuleDefs = [restaurants.schema, stringMatcher.schema];
+const moduleResolvers = [restaurants.resolvers, stringMatcher.resolvers];
 
 // Construct a schema, using GraphQL schema language
 const RootSchema = `

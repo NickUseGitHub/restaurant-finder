@@ -6,9 +6,12 @@ export default function SkillList({ title, skills }) {
     <ul className="skill-list">
       {title && <li className="title">{title}</li>}
       {skills &&
-        skills.map(function({ skillTitle, isStrongSkill }) {
+        skills.map(function({ skillTitle, isStrongSkill }, key) {
           return (
-            <li className={`${isStrongSkill === true ? 'strong' : ''}`}>
+            <li
+              key={key}
+              className={`${isStrongSkill === true ? 'strong' : ''}`}
+            >
               {skillTitle}
             </li>
           );

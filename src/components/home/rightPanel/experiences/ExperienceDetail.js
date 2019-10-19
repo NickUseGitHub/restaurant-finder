@@ -7,16 +7,16 @@ export default function ExperienceDetail({ companyDetails }) {
     <div className="experience-detail">
       <ul>
         {companyDetails &&
-          companyDetails.map(function(companyDetail) {
+          companyDetails.map(function(companyDetail, keyOuter) {
             const { title, details } = companyDetail;
 
             return (
-              <li>
+              <li key={keyOuter}>
                 <span className="title">{title}</span>
                 <ul>
                   {details &&
-                    details.map(function(detail) {
-                      return <li>{detail}</li>;
+                    details.map(function(detail, key) {
+                      return <li key={key}>{detail}</li>;
                     })}
                 </ul>
               </li>
